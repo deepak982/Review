@@ -4,6 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #333;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <h2>Sign up</h2>
@@ -15,18 +77,24 @@
     <form method="post">
         {% csrf_token %}
         <label>Username</label>
-        <input type="text" name="username" placeholder="Enter your Username"><br><br>
+        <input type="text" name="username" placeholder="Enter your Username">
+        
         <label>First Name</label>
-        <input type="text" name="first-name" placeholder="Enter your First Name"><br><br>
+        <input type="text" name="first-name" placeholder="Enter your First Name">
+        
         <label>Last Name</label>
-        <input type="text" name="last-name" placeholder="Enter your Last Name"><br><br>
+        <input type="text" name="last-name" placeholder="Enter your Last Name">
+        
         <label>Email</label>
-        <input type="email" name="email" placeholder="Enter Email Address"><br><br>
+        <input type="email" name="email" placeholder="Enter Email Address">
+        
         <label>Password</label>
-        <input type="password" name="password" placeholder="Enter Password"><br><br>
+        <input type="password" name="password" placeholder="Enter Password">
+        
         <label>Re-Password</label>
-        <input type="password" name="re-password" placeholder="Re-Enter Password"><br><br>
-        <button type="submit" style="width: 200px;">Sign-up</button>
+        <input type="password" name="re-password" placeholder="Re-Enter Password">
+        
+        <button type="submit">Sign-up</button>
     </form>
     <a href="/login/">Login</a>
 </body>
